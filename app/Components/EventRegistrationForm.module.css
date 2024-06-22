@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.pageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121212;
+    font-family: 'Poppins', sans-serif;
+}
+
+.formContainer {
+    width: 90%; /* Adjusted width for better responsiveness */
+    max-width: 600px; /* Maximum width to prevent form from becoming too wide */
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+}
+
+.formGroup {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup input[type="tel"],
+.formGroup select,
+.formGroup textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #e0e0e0;
+    background-color: #2e2e2e;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    border-color: #0070f3;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 112, 243, 0.4);
+    background-color: #333;
+}
+
+.formGroup input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.checkboxGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+.checkboxLabel input {
+    margin-right: 8px;
+}
+
+.submitButton {
+    width: 100%;
+    max-width: 200px; /* Adjusted max-width for button */
+    padding: 1.5rem;
+    background-color: #0070f3;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submitButton:hover {
+    background-color: #005bb5;
+    transform: translateY(-3px);
+}
+
+.submitButton:active {
+    transform: translateY(1px);
+}
+
+/* Error messages */
+.error {
+    color: red;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: -1.2rem;
+    left: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.formGroup input:focus ~ .error,
+.formGroup select:focus ~ .error {
+    display: none;
+}
